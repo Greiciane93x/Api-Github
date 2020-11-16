@@ -1,0 +1,49 @@
+body{
+    display:flex; 
+    flex-direction: column;
+    position: fixed;
+    background: url(https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg) no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-left: 50px;
+    margin-top:22px; 
+  
+}
+
+h1{
+    color: white;
+    font-size:40px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    font-size: 3em; color: #fffdd9;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+button{
+    margin-top:12px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 9px;
+    color: black;
+    background:white;
+    margin-right:12px;
+    margin-bottom: 12px;
+}
+#ImagemProfile{
+    display:flex;
+    margin-bottom: 12px;
+ 
+ 
+}
+#repositorio{
+    
+    margin-top:12px;
+    /* -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000;
+    font-size: 2em; color: #fffdd9;  */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+  
+    
+}
