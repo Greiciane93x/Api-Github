@@ -4,10 +4,12 @@ class UserModel{
         if(this._login !== undefined){           
             this._login = login; 
         }
+    
         this._id = "";
         this.avatar_url = ""; 
         this.repos_url = ""; 
-        this.url = ""; 
+        this.url = "";  
+         
         
     }
     
@@ -17,11 +19,14 @@ class UserModel{
         let requisicao  = new XMLHttpRequest(); 
         requisicao.open("GET",  `https://api.github.com/users/${login}` , false)
         requisicao.addEventListener("load", () => {
-            if(requisicao.status == 200){
-                let objeto = this._processaResponse(requisicao.responseText); 
-                this._atualiza (objeto); 
-            }
             
+                if(requisicao.status == 200){
+                    let objeto = this._processaResponse(requisicao.responseText); 
+                    this._atualiza (objeto); 
+                }else if(requisicao.status !=200 ){
+                    throw new Error("Link AQUIIII")
+                }
+           
         })
         requisicao.send(); 
     }
@@ -32,11 +37,12 @@ class UserModel{
         let requisicao  = new XMLHttpRequest(); 
         requisicao.open("GET",  `https://api.github.com/users/${login}/repos` , false)
         requisicao.addEventListener("load", () => {
+          
             if(requisicao.status == 200){
-                for(repos of this.repos_url){
+               
                     var objeto = this._processaResponse(requisicao.responseText); 
-                }
-                this._atualiza (objeto); 
+                
+                this._atualizaRepos (objeto); 
             }
             
         })
@@ -59,12 +65,21 @@ class UserModel{
         this.repos_url = dados.repos_url; 
         
     }
-    _atualizaRepos (dadosRepos){
-        
-        this._url = dadosRepos.url; 
+     _atualizaRepos (dadosRepos){
+       for (let i of dadosRepos){
+           let link = document.createElement("a");
+           link.innerHTML = `Repositorio: <a href="${i.html_url}">${i.login}</a><br>` 
+       }
         
         
     }
+
+    // getLogin(){
+    //     return this._login; 
+    // }
+    // getHtmlUrl(){
+    //     return this.html_url; 
+    // }
     
     getName(){
         return this._login; 
@@ -100,18 +115,17 @@ class UserView{
 }
 
 
-class UserViewRepositorio{
-    renderRepositorio(model){
-        let repos = document.querySelector("#repositorio")
-        repos.innerHTML  = `
-        ${model.getReposUrl()}
-        ` 
-        repos.href = model.getUrlRepos()
-        document.body.appendChild(repos); 
+// class UserViewRepositorio{
+//     renderRepositorio(model){
+//         let repos = document.querySelector("#repositorio")
+//         repos.innerHTML  = `
+//         ` 
+//         repos.href = model.getHtmlUrl()
+//         document.body.appendChild(repos); 
+//         console.log(repos)
         
-        
-    }
-}
+//     }
+// }
 
 class UserController{
     adicionaImagem(){
@@ -125,19 +139,22 @@ class UserController{
     
 }
 
-class UserControllerRepositorio{
-    adicionaRepositorio(){
-        let dados = new UserModel(login.value)
-        dados.buscaRepositorio(); 
+// class UserControllerRepositorio{
+//     adicionaRepositorio(){
+//         let dados = new UserModel(login.value)
+//         dados.buscaRepositorio();
         
-        let view = new UserView(); 
-        view.renderR (dados); 
         
-    }
+//         let view = new UserViewRepositorio(); 
+//         view.renderRepositorio (dados);
+//         console.log(view)
+        
+//     }
     
-}
+// }
 
 let controller = new UserController(); 
-document.getElementById("buscarRepositorio").addEventListener("click", controller.adicionaImagem)
-document.getElementById("buscarRepositorio").addEventListener("click", controller.adicionaRepositorio)
+ document.getElementById("buscarRepositorio").addEventListener("click", controller.adicionaImagem)
+// document.getElementById("buscarRepositorio").addEventListener("click", controller.adicionaRepositorio)
+// document.getElementById("buscarRepositorio").value="";
 var login = document.querySelector("#search")

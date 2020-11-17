@@ -1,8 +1,8 @@
 body{
     display:flex; 
     flex-direction: column;
-    position: fixed;
-    background: url(https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg) no-repeat center top fixed;
+   background: url(https://i.pinimg.com/originals/11/1a/03/111a03133d14214539c96e0f657dff1a.png) no-repeat center top fixed;
+   background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -17,8 +17,12 @@ h1{
     font-size:40px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000;
-    font-size: 3em; color: #fffdd9;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-size: 3em; color: #e6d9ff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 620px;
+    margin-bottom: 200px;
+   
+    
 }
 button{
     margin-top:12px;
@@ -26,24 +30,51 @@ button{
     border-radius: 9px;
     color: black;
     background:white;
-    margin-right:12px;
-    margin-bottom: 12px;
+    margin-bottom: 70px;
+    margin-right: 20px;
 }
 #ImagemProfile{
     display:flex;
-    margin-bottom: 12px;
- 
+    margin-bottom: 22px;
+    width: 30px;
  
 }
 #repositorio{
     
     margin-top:12px;
-    /* -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #000;
-    font-size: 2em; color: #fffdd9;  */
+    color: rgb(245, 179, 242);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    
+}
+#search{
+   
+    margin-left: 100px;
+    
+    
+}
+#id-digit{
+    margin-top:12px;
+    margin-left: 620px;
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
-  
     
+
 }
+img{
+    
+    width: 300px;
+    margin-left: 100px;
+    border-radius: 200px;
+}
+input{
+  
+    border-radius: 100px;
+    height: 25px;
+    width: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:5px 20px 3px;
+   
+}
+
