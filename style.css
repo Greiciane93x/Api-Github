@@ -7,60 +7,51 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-left: 50px;
-    margin-top:22px; 
+    margin-top:9px;
+   
   
 }
 
 h1{
+    display: flex;
+    align-items: center;
     color: white;
     font-size:40px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000;
     font-size: 3em; color: #e6d9ff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 620px;
-    margin-bottom: 200px;
-   
+    margin-top:22px;
+    margin-bottom: 22px;
+    margin-left: 20px;
     
 }
-h2{
-    margin-top:12px;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-}
+
 button{
     
     font-family: 'Times New Roman', Times, serif;
     border-radius: 9px;
     color: black;
     background:white;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
     margin-right: 20px;
-    margin-top:-700px;
 }
 
 a{
-    margin-top: 17px;
-    margin-bottom: 20px;
-    margin-left: 390px;
+    display:flex; 
+    flex-direction: flex-end;
+    flex-flow: row;
+    margin-bottom: 10px;
+    margin-left: 440px;
     font-family: 'Times New Roman', Times, serif;
-    color: black;
+    color: rgb(27, 41, 2);
     font-size:20px;
+   
+    
+}
 
-    
-    
-}
-#ImagemProfile{
-    display:flex;
-    margin-bottom: 22px;
-    width: 30px;
- 
-}
 #repositorio{
     
-    margin-top:12px;
     color: rgb(245, 179, 242);
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
@@ -68,29 +59,20 @@ a{
 }
 #search{
    
-    margin-left: 100px;
+    margin-left: 50px;
     
     
-}
-#id-digit{
-    margin-top:12px;
-    margin-left: 620px;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    
-
-}
-#imagemGit{
-    width: 50px;
 }
 
 img{
     
     width: 300px;
-    margin-left: 670px;
+    margin-top:-100px;
+    margin-left: 800px;
     border-radius: 200px;
-    margin-top:-500px;
+    margin-bottom: 20px;
+   
+    
 }
 input{
   
@@ -99,6 +81,6 @@ input{
     width: 200px;
     font-family: 'Times New Roman', Times, serif;
     padding:5px 20px 3px;
-    margin-top:-500px;
+ 
    
 }
