@@ -55,9 +55,9 @@ class UserModel{
        
         let montaUsuario = document.querySelector("body")
         let profileUsuario = document.createElement("div")
+
         montaUsuario.appendChild(profileUsuario)
         profileUsuario.innerHTML = `<img src=${dados[0].owner.avatar_url}>`
-        profileUsuario.innerHTML += `<table> <th>Repositórios:</th>` 
         for(let i of dados){
 
             let Repositorios = document.createElement("a"); 
@@ -66,8 +66,8 @@ class UserModel{
 
             Repositorios.innerHTML =`
             
-            <td><a href="${i.html_url}"></td>
-            ${i.name}</a></table>
+            <a href="${i.html_url}"></td>
+            ${i.name}</a>
            
             `
 

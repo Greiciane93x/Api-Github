@@ -40,6 +40,18 @@ button{
     margin-right: 20px;
     margin-top:-700px;
 }
+
+a{
+    margin-top: 17px;
+    margin-bottom: 20px;
+    margin-left: 390px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size:20px;
+
+    
+    
+}
 #ImagemProfile{
     display:flex;
     margin-bottom: 22px;
