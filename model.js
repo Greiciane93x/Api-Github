@@ -13,7 +13,7 @@ class UserModel{
         
         let login = this._login; 
         let requisicao  = new XMLHttpRequest(); 
-        requisicao.open("GET",  `https://api.github.com/users/` + login  , false)
+        requisicao.open("GET",  `https://api.github.com/users/` + login + `/repos`  , false)
         requisicao.addEventListener("load", () => {
             if(requisicao.status == 200){
                 let objeto = this._processaResponse(requisicao.responseText); 
@@ -51,13 +51,27 @@ class UserModel{
     
     _atualiza (dados){
         
-        this._login = dados.login; 
-        this._html_url = dados.html_url; 
-        this._id = dados.id;
-        this.avatar_url = dados.avatar_url; 
-        this.repos_url = dados.repos_url; 
-        this.url = dados.url; 
+ 
        
+        let montaUsuario = document.querySelector("body")
+        let profileUsuario = document.createElement("div")
+        montaUsuario.appendChild(profileUsuario)
+        profileUsuario.innerHTML = `<img src=${dados[0].owner.avatar_url}>`
+        profileUsuario.innerHTML += `<table> <th>Repositórios:</th>` 
+        for(let i of dados){
+
+            let Repositorios = document.createElement("a"); 
+            
+            montaUsuario.appendChild(Repositorios)
+
+            Repositorios.innerHTML =`
+            
+            <td><a href="${i.html_url}"></td>
+            ${i.name}</a></table>
+           
+            `
+
+        }
     }
   
 

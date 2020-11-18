@@ -1,8 +1,8 @@
 body{
     display:flex; 
     flex-direction: column;
-   background: url(https://i.pinimg.com/originals/11/1a/03/111a03133d14214539c96e0f657dff1a.png) no-repeat center top fixed;
-   background-color: black;
+    background: url(https://i.pinimg.com/originals/11/1a/03/111a03133d14214539c96e0f657dff1a.png) no-repeat center top fixed;
+    background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,14 +24,21 @@ h1{
    
     
 }
-button{
+h2{
     margin-top:12px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+button{
+    
     font-family: 'Times New Roman', Times, serif;
     border-radius: 9px;
     color: black;
     background:white;
     margin-bottom: 70px;
     margin-right: 20px;
+    margin-top:-700px;
 }
 #ImagemProfile{
     display:flex;
@@ -62,11 +69,16 @@ button{
     
 
 }
+#imagemGit{
+    width: 50px;
+}
+
 img{
     
     width: 300px;
-    margin-left: 100px;
+    margin-left: 670px;
     border-radius: 200px;
+    margin-top:-500px;
 }
 input{
   
@@ -75,6 +87,6 @@ input{
     width: 200px;
     font-family: 'Times New Roman', Times, serif;
     padding:5px 20px 3px;
+    margin-top:-500px;
    
 }
-

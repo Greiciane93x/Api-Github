@@ -11,16 +11,3 @@ class UserView{
 }
 
 
- class UserViewRepositorio{
-    renderRepositorio(model){
-        let repos = document.querySelector("#repositorio")
-        repos.innerHTML  = `
-        ` 
-        
-      
-
-
-
-   
-    }
-}
