@@ -86,9 +86,13 @@ class UserController{
         dados.buscaImagem(); 
         
     }
+    limpaCampos(){
+        document.querySelector("#search").value = ""; 
+    }
     
 }
 
 let controller = new UserController(); 
 document.getElementById("buscarRepositorio").addEventListener("click", controller.adicionaImagem)
+document.getElementById("buscarRepositorio").addEventListener("click", controller.limpaCampos)
 var login = document.querySelector("#search")
