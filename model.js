@@ -38,19 +38,25 @@ class UserModel{
     _atualiza (dados){
        
         let montaUrl = document.querySelector("#conteudoUrl")
-        
+       
+    
         let profileUsuario = document.querySelector("#conteudo")
+       
         let arrayUrl = [] 
         
        
         profileUsuario.innerHTML = `<img src=${dados[0].owner.avatar_url}>`
         for(let i of dados){
-            arrayUrl.push(i.html_url+ `<br>`)
+            
+            arrayUrl.push(`
+           
+            <a href="${i.html_url}"<br>${i.name}</a>
+          
+            `)
         }    
              
         montaUrl.innerHTML = arrayUrl.toString().split(',').join('')
 
-        
     
         
       

@@ -7,7 +7,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-top:9px;
+    /* margin-top:9px; */
    
   
 }
@@ -23,7 +23,7 @@ h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top:22px;
     margin-bottom: 22px;
-    margin-left: 20px;
+    margin-left: 750px;
     
 }
 
@@ -34,7 +34,8 @@ button{
     color: black;
     background:white;
     margin-bottom: 80px;
-    margin-right: 20px;
+    margin-left: 5px;
+
 }
 
 a{
@@ -44,7 +45,7 @@ a{
     /* margin-bottom: -50px; */
     margin-left: 440px;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(27, 41, 2);
+    color: black;
     font-size:20px;
    
     
@@ -58,16 +59,13 @@ a{
     
 }
 #search{
-   
     margin-left: 50px;
-    
-    
 }
 
 img{
     
     width: 300px;
-    margin-top:50px;
+    margin-top:20px;
     border-radius: 200px;
     margin-bottom: 20px;
    
@@ -79,36 +77,39 @@ input{
     height: 25px;
     width: 200px;
     font-family: 'Times New Roman', Times, serif;
-    padding:5px 20px 3px;
+    padding:5px 20px 3px;  
+    margin-left: 800px!important;
  
    
 }   
 #container{
     display: flex;
     width: 40%;
-    
     flex-direction: column;
     align-items: center;
-    background-color: wheat;
     opacity: 0.9;
-    margin-left: 600px;    
+    margin-left: 600px;   
+    background-color: white;
+  
+   
     
 }
 #conteudo{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-
-    margin-left: 10px;
+    
+    /* margin-left: 10px; */
 }
 #conteudoUrl{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: -40px;
+    margin-left: -400px;
     margin-bottom: 100px;
+   
+
 }
 
 
-   
 
