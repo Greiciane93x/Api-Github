@@ -36,25 +36,24 @@ class UserModel{
     }
     
     _atualiza (dados){
-              
-        let montaUsuario = document.querySelector("body")
-        let profileUsuario = document.createElement("div")
        
+        let montaUrl = document.querySelector("#conteudoUrl")
         
-        montaUsuario.appendChild(profileUsuario)
+        let profileUsuario = document.querySelector("#conteudo")
+        let arrayUrl = [] 
+        
+       
         profileUsuario.innerHTML = `<img src=${dados[0].owner.avatar_url}>`
         for(let i of dados){
+            arrayUrl.push(i.html_url+ `<br>`)
+        }    
+             
+        montaUrl.innerHTML = arrayUrl.toString().split(',').join('')
 
-            let Repositorios = document.createElement("a"); 
-            montaUsuario.appendChild(Repositorios)
-            Repositorios.innerHTML =
-            `
-            <a href="${i.html_url}"></td>
-            ${i.name}</a>
-           
-            `
-
-        }
+        
+    
+        
+      
     }
   
 
@@ -88,6 +87,7 @@ class UserController{
     }
     limpaCampos(){
         document.querySelector("#search").value = ""; 
+      
     }
     
 }
