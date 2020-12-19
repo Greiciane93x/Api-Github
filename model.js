@@ -38,10 +38,7 @@ class UserModel{
     _atualiza (dados){
        
         let montaUrl = document.querySelector("#conteudoUrl")
-       
-    
         let profileUsuario = document.querySelector("#conteudo")
-       
         let arrayUrl = [] 
         
        
@@ -57,8 +54,7 @@ class UserModel{
              
         montaUrl.innerHTML = arrayUrl.toString().split(',').join('')
 
-    
-        
+      
       
     }
   
@@ -101,4 +97,7 @@ class UserController{
 let controller = new UserController(); 
 document.getElementById("buscarRepositorio").addEventListener("click", controller.adicionaImagem)
 document.getElementById("buscarRepositorio").addEventListener("click", controller.limpaCampos)
+
 var login = document.querySelector("#search")
+
+
