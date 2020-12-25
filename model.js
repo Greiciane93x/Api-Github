@@ -53,8 +53,8 @@ class UserModel{
         }    
              
         montaUrl.innerHTML = arrayUrl.toString().split(',').join('')
-
-      
+        
+        
       
     }
   
@@ -99,5 +99,4 @@ document.getElementById("buscarRepositorio").addEventListener("click", controlle
 document.getElementById("buscarRepositorio").addEventListener("click", controller.limpaCampos)
 
 var login = document.querySelector("#search")
-
 
