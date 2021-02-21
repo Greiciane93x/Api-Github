@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
     
     <title>API Github - Resilia</title>
 </head>
 <body>
 
-    <div> 
-            <h1>Repositórios do GitHub</h1>
 
-            <input type="text" placeholder ="Digite o Perfil do GitHub" id="search"/> 
-            <button id="buscarRepositorio">BUSCA</button> 
-              
-    </div>    
-   
 
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <img src="github-logo.png" id="logo-github" /> 
+          <a class="navbar-brand"><h1>Repositórios do Github</h1></a>
+
+            <div id="itens-busca"> 
+                <input class="form-control me-2" type="text" aria-label="Search" id="search">
+                <button class="btn btn-outline-success"  id="buscarRepositorio">Buscar</button>
+            </div>
+        </div>
+      </nav>
+
+      
     <div id="container">
-   
         <div id="conteudo"></div>
         <a href="" id="conteudoUrl"></a>
-
     </div>
-
-    <script src="model.js"></script>
+      <script src="model.js"></script>
   
     
 </body>
