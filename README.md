@@ -2,7 +2,7 @@
 
 Através dessa API é possível listar os repositórios de acordo com o nickname de um usuário específico. 
 
-* __Proejto Utilizando XMLHttpRequest__
+* __Projeto Utilizando XMLHttpRequest__
 
 <hr> 
 
