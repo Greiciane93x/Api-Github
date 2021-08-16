@@ -52,12 +52,8 @@ class UserModel{
             `)
         }    
              
-        montaUrl.innerHTML = arrayUrl.toString().split(',').join('')
-        
-        
-      
+        montaUrl.innerHTML = arrayUrl.toString().split(',').join('') 
     }
-  
 
     getLogin(){
         return this._login; 
